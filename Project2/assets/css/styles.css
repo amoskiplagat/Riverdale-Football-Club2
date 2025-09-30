@@ -1,0 +1,130 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design tokens */
+:root {
+  --color-bg: #f9fafc;
+  --color-primary: #004aad;
+  --color-secondary: #0077cc;
+  --color-accent: #ffcc00;
+  --color-text: #222;
+  --font-body: 'Segoe UI', sans-serif;
+  --font-heading: 'Trebuchet MS', sans-serif;
+  --max-width: 960px;
+  --radius: 0.5rem;
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Layout */
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+header,
+footer {
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+nav a[aria-current="page"] {
+  border-bottom: 2px solid var(--color-accent);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+}
+
+section, article, aside {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+footer address {
+  font-style: normal;
+}
+
+/* Media */
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* Interactive elements */
+details, dialog {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+}
+
+/* Progress & Meter */
+progress, meter {
+  width: 100%;
+  height: 1.2rem;
+}
+
+/* Accessibility */
+a:focus {
+  outline: 2px dashed var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* Motion */
+@media (prefers-reduced-motion: no-preference) {
+  nav a {
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  nav a:hover {
+    color: var(--color-accent);
+  }
+}
